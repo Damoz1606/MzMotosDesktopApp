@@ -5,37 +5,63 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <!-- --------------- -->
 </head>
 
 <body>
 
     <div class="wrapper">
+        <!-- SideBar -->
         <div class="navbar sidebar" id="sidebar">
             <ul>
                 <li>
-                    <a href="#" class="active">
-                        <!-- ICON --><span class="section_title navItem">HOME</span></a>
+                    <a href="#" class="active" id="home" onclick="ChangePage(id)"><span class="navItem fas fa-home"></span></a>
                 </li>
                 <li>
-                    <a href="#" class="">
-                        <!-- ICON --><span class="section_title navItem">DB1</span></a>
+                    <a href="#" class="" id="parts" onclick="ChangePage(id)"><span class="navItem fas fa-tools"></span></a>
                 </li>
                 <li>
-                    <a href="#" class="">
-                        <!-- ICON --><span class="section_title navItem">DB2</span></a>
+                    <a href="#" class="" id="motorcycle" onclick="ChangePage(id)"><span class="navItem fas fa-motorcycle"></span></a>
                 </li>
-                <li>
-                    <a href="#" class="">
-                        <!-- ICON --><span class="section_title navItem">CLOSE</span></a>
-                </li>
+                <!-- <li>
+                    <a href="#" class="" id="logout" onclick="ChangePage('logout')"><span class="navItem fas fa-power-off"></span></a>
+                </li> -->
             </ul>
         </div>
-
+        <!-- MainContainer -->
         <div class="mainContainer">
-            <h1>💖 Hello World!</h1>
-            <p>Welcome to your Electron application.</p>
+            <!-- Container -->
+            <div class="banner" id="banner" style="background-image: url('../static/images/Banner.png');" id="HOME"></div>
+            <div class="container disable" id="listContainer">
+                <div class="banner" id="tableContainer" style="background-image: url('../static/images/wood.png');" id="LIST">
+                    <table id="table">
+                        <thead id="tableHeader">
+                            <tr class="headerItem">
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                                <th>Header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemsBox">
+                            <tr class="item" id="item" onclick="OpenDetails('detailBtn')">
+                                <td>Example 1</td>
+                                <td>Example 2</td>
+                                <td>Example 3</td>
+                                <td>Example 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="float" id="addBtn" onclick="OpenDetails(id)">
+                        <i class="fa fa-plus my-float"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="../javascript/sideButtons.js"></script>
+    <script type="text/javascript" src="../javascript/detailBtn.js"></script>
 </body>
 
 </html>
