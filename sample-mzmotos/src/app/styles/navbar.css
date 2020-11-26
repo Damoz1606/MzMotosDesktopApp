@@ -1,0 +1,95 @@
+.navbar {
+    display: flex;
+}
+
+.nv-fx {
+    position: fixed;
+}
+
+.nv-horizontal {
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.btn-pos-right {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.nv-horizontal ul li {
+    display: inline;
+}
+
+.nv-horizontal ul li a {
+    text-decoration: none;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.nv-horizontal ul li a:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    display: none;
+    color: #fff;
+}
+
+.nv-horizontal ul li:hover {
+    cursor: pointer;
+}
+
+.nv-horizontal ul li a:hover,
+.nv-horizontal ul li a span:hover,
+.nv-horizontal ul li a.active {
+    color: #fff;
+}
+
+.nv-vertical {
+    padding: 10px 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btn-pos-center {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.nv-vertical ul li a {
+    text-decoration: none;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.nv-vertical ul li a:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    display: none;
+    color: #fff;
+}
+
+.nv-vertical ul li:hover {
+    cursor: pointer;
+}
+
+.nv-vertical ul li a:hover,
+.nv-vertical ul li a span:hover,
+.nv-vertical ul li a.active {
+    color: #fff;
+}
+
+
+/* .nv-horizontal ul li a:hover:before,
+.nv-horizontal ul li a.active:before {
+    display: block;
+} */

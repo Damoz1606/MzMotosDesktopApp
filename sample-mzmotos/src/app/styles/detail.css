@@ -1,0 +1,36 @@
+input {
+    border-radius: 7px;
+    border-color: rgb(0 0 0 / 35%);
+    padding: 0px 5px;
+}
+
+body {
+    border-radius: 20px;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    background: rgb(216, 216, 216);
+}
+
+.box ul li a {
+    color: rgb(53, 53, 53);
+}
+
+.informationContainer {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.titleInfo {
+    padding: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.info {
+    padding: 5px;
+    color: rgb(134, 134, 134);
+}

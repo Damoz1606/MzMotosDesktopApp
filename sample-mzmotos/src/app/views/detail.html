@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <link rel="stylesheet" href="../static/css/detail.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper" id="detailPage">
+        <!-- Up button box -->
+        <div class="box navbar nv-horizontal btn-pos-right">
+            <ul>
+                <li>
+                    <a href="#" class="button" id="exitBtn" onclick="Close()"><span class="fas fa-times"></span></a>
+                </li>
+                <li>
+                    <a href="#" class="button" id="editBtn" onclick="EnableButton(id)"><span class="far fa-edit"></span></a>
+                </li>
+                <li>
+                    <a href="#" class="button disable" id="readyBtn" onclick="EnableButton(id)"><span class="fas fa-check"></span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Container -->
+        <div class="container">
+            <div class="detailContainer" id="detailDiv">
+                <div class="informationContainer">
+                    <div class="titleInfo">ExampleTile :</div>
+                    <div class="info">Example info</div>
+                </div>
+                <div class="informationContainer">
+                    <div class="titleInfo">ExampleTile :</div>
+                    <div class="info">Example info</div>
+                </div>
+                <div class="informationContainer">
+                    <div class="titleInfo">ExampleTile :</div>
+                    <div class="info">Example info</div>
+                </div>
+                <div class="informationContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PVP</th>
+                                <th>PVD</th>
+                                <th>PVM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$ 0.00</td>
+                                <td>$ 0.00</td>
+                                <td>$ 0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="detailContainer disable" id="editDiv">
+                <div class="informationContainer">
+                    <div class="titleInfo">ExampleTile :</div>
+                    <input type="text" placeholder="Example">
+                </div>
+                <div class="informationContainer">
+                    <div class="titleInfo">PVP :</div>
+                    <input type="text" placeholder="Example">
+                </div>
+                <div class="informationContainer">
+                    <div class="titleInfo">PVD :</div>
+                    <input type="text" placeholder="Example">
+                </div>
+                <div class="informationContainer">
+                    <div class="titleInfo">PVM :</div>
+                    <input type="text" placeholder="Example">
+                </div>
+            </div>
+        </div>
+        <!-- Footer button box -->
+        <!-- <div class="box">
+        </div> -->
+    </div>
+    <script type="text/javascript" src="../javascript/ExtraPages.js"></script>
+</body>
+
+</html>
