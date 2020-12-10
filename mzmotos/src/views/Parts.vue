@@ -18,6 +18,9 @@ import Table from '../components/Table.vue'
 import FloatBtn from '../components/FloatButton.vue'
 import Detail from './DetailPart.vue'
 import Add from '../views/AddParts.vue'
+import axios from '../../node_modules/axios'
+
+let db = require('../config/dbPartConnection.js');
 
 export default {
     name: 'Parts',
@@ -39,24 +42,36 @@ export default {
                 text: "Header 4"
             }
         ],
-        item:
-        [
-            [
-                {
-                    text: "Example 1 H1"
-                },
-                {
-                    text: "Example 1 H2"
-                },
-                {
-                    text: "Example 1 H3"
-                },
-                {
-                    text: "Example 1 H4"
+        items: [],
+        item: {
+            id: null,
+            part: '',
+            pvp: '',
+            pvd: '',
+            pvm: ''
+        }
+    }),
+    methods: {
+        show() {
+            const connection = db();
+            axios.get('/', (req, res) => {
+                if(req){
+                    throw req;
                 }
-            ]
-        ]
-    })
+                console.log(res);
+                var sql = 'SELECT * FROM parts';
+                connection.query(sql, (req, res) => {
+                    if(req){
+                        throw req;
+                    }
+                    this.items = res;
+                });
+            });
+        }
+    },
+    created: function () {
+        this.show();
+    },
 }
 </script>
 

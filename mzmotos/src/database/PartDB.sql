@@ -1,0 +1,10 @@
+USE mz_db
+
+CREATE TABLE IF NOT EXISTS parts(
+    part_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    pvp FLOAT,
+    pvd FLOAT,
+    pvm FLOAT,
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
